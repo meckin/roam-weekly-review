@@ -1,8 +1,11 @@
-# roam-weekly-review
-Alfred workflow that generates a Roam weekly review template
+# Readme
 
-This workflow allows you to use a snippet trigger with [Alfred](https://www.alfredapp.com/) to generate a weekly review. Due to how Python's `datetime`
-module works, it should work to do a weekly review on both Sunday (the assumed end of the week) and Monday (the first day of the week after the one being reviewed).
+I've forked `kylestratis/roam-weekly-review` as it worked with Alfred, this logic is highly out of date. Since Roam has Smartblocks, you can create this template 100% within roam and there no use for Alfred + textexpander. 
+
+The framework is also semi- Nat Eliason weekly review forked too.
+
+
+# roam-weekly-review
 
 This review has the following sections:
 * What did I do this week? - This is a query of all done TODO items from the week you are reviewing. 
@@ -10,28 +13,34 @@ This review has the following sections:
 * Post-Review Retrospective - Questions to find areas of improvement for the coming week.
 
 ## Installation
-To install, all you need to do is download the Roam Daily Notes.alfredworkflow file from this repo and
-open it with Alfred. Define the snippet trigger you want to use (I like `\\xrwr`) and use it whenever you
-want to review the past week. The script that generates the template is also available to look
-at in this repo. 
+- Install Smartblocks within your roams /js 
+- Add the text below to your /template page 
 
 ## Output
 An example output looks like this: 
 ```
-# What did I do this week?
-  - {{[[query]]: {and: [[DONE]] {between: [[August 3rd, 2020]][[August 9th, 2020]] {not: [[query]]}}}}
-# Review Questions
-  - How many high-impact items (priority projects, articles, videos, courses, etc.) on my to-do list was I able to completely close out?
-  - What do I want to accomplish in the week ahead?
-  - What adjustments do I need to make to ensure I reach my goals?
-  - What am I struggling with right now?
-  - What do I want to learn by the end of this week?
-  - What is one thing I will try that will get me out of my comfort zone?
-  - Who can I reach out to for help this week?# Post-Review Retrospective
-  - What went well this week?
-  - What could be adjusted?
-  - What should I stop doing?
-  - What should I start doing?
+- #42SmartBlock Weekly Plan 
+    - # Week:: [[ <%DATE:today%> ]]
+        - __Weekly Review:: [[Weekly Review <%DATE:today%>]]__
+        - ## Pages to Reference
+            - Go through these to find priorities for upcoming week.
+            - [[TODO]]
+            - [[Goals]]
+            - [[📝 Projects]]
+            - [[📓 Article Ideas]]
+            - [[🧠 Research]]
+        - ## Top Priorities
+        - ## Daily Goals
+            - Monday: [[<%DATE:today%>]]
+            - Tuesday: [[<%DATE:tuesday%>]]
+            - Wednesday: [[<%DATE:wednesday%>]]
+            - Thursday: [[<%DATE:thisthursday%>]]
+            - Friday: [[ <%DATE:thisfriday%> ]]
+            - Saturday: [[<%DATE:thissaturday%>]]
+            - Sunday: [[<%DATE:nextsunday%>]]
+
 ```  
 
-Enjoyed this workflow? [Buy me a beer!](https://www.buymeacoffee.com/kylestratis)
+Still buy him a beer, I don't drink [Buy me a beer!](https://www.buymeacoffee.com/kylestratis)
+
+but you can follow me on [Twitter](https://twitter.com/Coopish_)
